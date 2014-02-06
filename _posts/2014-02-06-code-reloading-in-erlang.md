@@ -2,6 +2,7 @@
 layout: post
 title:  "Do messages get lost when erlang modules are upgraded?"
 categories: thesis erlang
+comments: true
 ---
 
 One of the problems that I am currently dealing with in my thesis is
@@ -41,7 +42,7 @@ program. During the execution before the 5th ping, I uncomment the
 code at line 29 to display the new version running message after an
 upgrade has occurred.
 
-{% showterm 0159350f205cc475c7f18 %}
+<iframe src="http://showterm.io/0159350f205cc475c7f18" width="640" height="600"></iframe>
 
 In erlang, the vm is a huge advantage since it controls the execution
 and keeps multiple versions of modules in memory.  Besides, it can
@@ -49,4 +50,6 @@ make sure that some calls go to the current module and some go to the
 old module.  Also, the mailbox of each process is preserved during
 upgrades.
 
-How to achieve this in Cloud Haskell?
+How to achieve all this in Cloud Haskell?
+Why do we need to have mutiple versions of modules in memory?
+Think about it! I will answer this in my next post.
