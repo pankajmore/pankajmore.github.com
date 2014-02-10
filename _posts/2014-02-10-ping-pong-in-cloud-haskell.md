@@ -203,6 +203,7 @@ in the reboot function?
 
 Once the reboot function is fixed, we have whole host of other
 problems such as
+
 * properly returning to the correct location in the new version of
 code
 * making sure that message queues don't get wiped out when the upgrade
@@ -216,6 +217,7 @@ code
 
 Currently, we need answers to the following questions before we can
 look to fixing the above problems?
+
 * What happens to message queues and other state created by processes
   during an upgrade?
 * What happens to the threads which are running the processes themselves during
