@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ping Pong in Cloud Haskell?"
+title:  "Hot Code Reloading in Cloud Haskell?"
 categories: thesis erlang cloud haskell
 comments: true
 ---
