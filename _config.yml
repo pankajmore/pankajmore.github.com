@@ -1,4 +1,6 @@
 name: pankajmore.in
+description: Pankaj occasionally writes about things.
+url: http://pankajmore.in
 markdown: redcarpet
 pygments: true
 permalink: /:title.html
