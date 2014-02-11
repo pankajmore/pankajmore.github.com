@@ -178,7 +178,7 @@ reboot :: Module -> IO ()
 {% endhighlight %}
 
 But who knows what module needs to be reloaded. The static core only
-knows it(while is boots up the dynamic module). But, reboot needs to
+knows it(while it boots up the dynamic module). But, reboot needs to
 be called by the dynamic module. So, static core should communicate
 this value of m to the dynamic module. How? It can simply send this
 value while calling the main of dynamic module.
