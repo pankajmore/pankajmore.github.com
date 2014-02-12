@@ -44,11 +44,11 @@ upgrade has occurred.
 
 <iframe src="http://showterm.io/0159350f205cc475c7f18" width="640" height="600"></iframe>
 
-In erlang, the vm is a huge advantage since it controls the execution
-and keeps multiple versions of modules in memory.  Besides, it can
-make sure that some calls go to the current module and some go to the
-old module.  Also, the mailbox of each process is preserved during
-upgrades.
+Compared to Haskell, Erlang has a vm which is a huge advantage since
+it controls the execution and keeps multiple versions of modules in
+memory.  Besides, it can make sure that some calls go to the current
+module and some go to the old module.  Also, the mailbox of each
+process is preserved during upgrades as it is separately managed by the vm.
 
 How to achieve all this in Cloud Haskell?
 Why do we need to have mutiple versions of modules in memory?
