@@ -35,7 +35,61 @@ Coming back to the original question, what happens to the messages in
 transit during an upgrade. Below is my attempt at figuring out the
 answer.
 
-{% gist 8843744 %}
+{% highlight erlang linenos=table %}
+-module('pingpong').
+-compile(export_all).
+-import(timer,[sleep/1]).
+
+
+start(N) ->
+    Server = spawn(?MODULE,server,[]),
+    _ = spawn(?MODULE,client,[Server,N,0]).
+
+server() ->
+    receive
+        upgrade ->
+            compile:file(?MODULE),
+%%            sys:suspend(?MODULE),
+            code:purge(?MODULE),
+            sleep(1000),
+            code:load_file(?MODULE),
+%%            sys:resume(?MODULE),
+            ?MODULE:server();
+        {ping,Cid} ->
+            sleep(1000),
+%%            io:format("New version Running!~n"),
+%%            io:format("Received a PING!~n"),
+            Cid ! pong,
+%%            io:format("Sent        a PONG!~n"),
+            server()
+    end.
+
+client(_,0,C) ->
+    io:format("DONE!~n"),
+    io:format("Received ~p PONGS!~n",[C]);
+client(Server,5,C) ->
+    io:format("Sending an upgrade message!~n"),
+    Server ! upgrade,
+    From = self(),
+    Server ! {ping,From},
+    io:format("Sent          a PING!~n"),
+    receive
+        pong ->
+            io:format("Received a PONG!~n"),
+            client(Server,5-1,C+1)
+    end;
+client(Server,N,C) ->
+    sleep(1000),
+    From = self(),
+    Server ! {ping,From},
+    io:format("Sent          a PING!~n"),
+    receive
+        pong ->
+            io:format("Received a PONG!~n"),
+            client(Server,N-1,C+1)
+    end.
+{% endhighlight %}
+
 
 You can try changing the code before an upgrade message is received
 and see for real that hot-code reloading indeed works!  Also, since
