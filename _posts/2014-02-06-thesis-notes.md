@@ -1,7 +1,11 @@
 ---
 layout: post
 title:  "A daily web-log documenting my thesis journey"
-categories: jekyll thesis erlang haskell
+tags: [jekyll,thesis,erlang,haskell]
+image:
+  feature: abstract-6.jpg
+  credit: dargadgetz
+  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
 This blog would contain my thoughts on how to achieve hot code

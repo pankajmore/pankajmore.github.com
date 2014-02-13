@@ -1,8 +1,13 @@
 ---
 layout: post
 title:  "Hot Code Reloading in Cloud Haskell?"
-categories: thesis erlang cloud haskell
+tags: [thesis, erlang, cloud, haskell]
 comments: true
+share: true
+image:
+  feature: abstract-6.jpg
+  credit: dargadgetz
+  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
 We want to achieve message passing reliability as in case of Erlang

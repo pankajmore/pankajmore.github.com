@@ -1,8 +1,13 @@
 ---
 layout: post
 title:  "Do messages get lost when erlang modules are upgraded?"
-categories: thesis erlang
+tags: [thesis,erlang]
+image:
+  feature: abstract-6.jpg
+  credit: dargadgetz
+  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 comments: true
+share: true
 ---
 
 One of the problems that I am currently dealing with in my thesis is

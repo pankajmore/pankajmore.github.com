@@ -1,8 +1,13 @@
 ---
 layout: post
 title:  "Why do we need multiple versions of a module in memory?"
-categories: thesis erlang cloud haskell
+tags: [thesis, erlang, cloud, haskell]
+image:
+  feature: abstract-6.jpg
+  credit: dargadgetz
+  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 comments: true
+share: true
 ---
 
 We can spawn multiple processes on a single node. Both erlang and
