@@ -230,3 +230,5 @@ look to fixing the above problems?
   continue to work without problems after reboot?
 
 Thoughts and comments please!
+
+UPDATE : The next post in the series is up [here]({% post_url 2014-02-14-ping-pong-in-cloud-haskell-part-2 %}).
