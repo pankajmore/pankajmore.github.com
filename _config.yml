@@ -27,6 +27,7 @@ owner:
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   UA-47864195-1
+heap_analytics:      2545765613
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:         
