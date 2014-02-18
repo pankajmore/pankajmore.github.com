@@ -34,9 +34,9 @@ bing_verify:
 # Links to include in top navigation
 # For external links add external: true
 links:
-#  - title: External Link
-#    url: http://mademistakes.com
-#    external: true
+ - title: Tech Stack
+   url: /stack
+   external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Asia/Calcutta
